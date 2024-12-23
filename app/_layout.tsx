@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 
 import "./global.css";
 import { useEffect } from "react";
+import { Stack } from "expo-router";
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -25,9 +26,5 @@ export default function RootLayout() {
     return null;
   }
 
-  return (
-    <View>
-      <Text className="font-bold text-lg my-10">Welcome</Text>
-    </View>
-  );
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
